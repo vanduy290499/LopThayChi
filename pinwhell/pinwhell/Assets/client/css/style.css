@@ -3378,7 +3378,9 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1rem; }
   .nav-link:hover, .nav-link:focus {
-    text-decoration: none; }
+    text-decoration: none;
+   
+  }
   .nav-link.disabled {
     color: #6c757d;
     pointer-events: none;
@@ -8052,7 +8054,6 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 15px;
     padding-top: 2.3rem;
     padding-bottom: 2.3rem;
     padding-left: 20px;
@@ -8060,8 +8061,11 @@ h1, h2, h3, h4, h5,
     font-weight: 400;
     color: #000000;
     opacity: 1 !important; }
+    
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #000000; }
+        color: orangered;
+    }
+   
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
@@ -9371,9 +9375,14 @@ textarea.form-control {
 .contact-section .contact-info p a {
   color: #1a1a1a; }
 
+.contact-section .contact-info p a:hover{
+    color: orangered;
+}
+
 .contact-section .box {
-  width: 100%;
-  display: block; }
+    width: 100%;
+    display: block;
+}
   .contact-section .box h3 {
     font-size: 24px;
     font-weight: 500; }

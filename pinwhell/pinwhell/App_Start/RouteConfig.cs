@@ -14,6 +14,42 @@ namespace pinwhell
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            name: "Home",
+            url: "trang-chu",
+            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+        );
+            routes.MapRoute(
+             name: "About",
+             url: "gioi-thieu",
+             defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional },
+             namespaces: new[] { "OnlineShop.Controllers" }
+         );
+            routes.MapRoute(
+             name: "Courses",
+             url: "cac-khoa-hoc",
+             defaults: new { controller = "Courses", action = "Index", id = UrlParameter.Optional },
+             namespaces: new[] { "OnlineShop.Controllers" }
+         );
+            routes.MapRoute(
+            name: "Pricing",
+            url: "dinh-gia",
+            defaults: new { controller = "Pricing", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+        );
+            routes.MapRoute(
+            name: "Blog",
+            url: "bai-viet",
+            defaults: new { controller = "Blog", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+        );
+            routes.MapRoute(
+            name: "Contact",
+            url: "lien-he",
+            defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "OnlineShop.Controllers" }
+        );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
