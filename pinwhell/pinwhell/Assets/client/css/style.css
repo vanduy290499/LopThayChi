@@ -8065,6 +8065,8 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
         color: orangered;
     }
+    /*.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+      color: #000000; }*/
    
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -8410,7 +8412,8 @@ h1, h2, h3, h4, h5,
   max-width: 1230px; }
 
 .bg-light {
-  background: #fafafa !important; }
+    background: #f0f2f5 !important;
+}
 
 .bg-white {
   background: #fff !important; }
