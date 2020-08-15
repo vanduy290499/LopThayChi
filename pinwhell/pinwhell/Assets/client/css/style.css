@@ -250,7 +250,28 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    
 }
+
+.log {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    float: right;
+    margin-right: 130px;
+}
+
+    .log input {
+        width: 100px;
+        background-color: #fda638;
+        border: 1px solid #fda638;
+        color:white;
+        border-radius: 5px;
+    }
+        .log input:hover {
+            background-color: white;
+            color: #fda638;
+        }
 
 button,
 input {
@@ -8900,10 +8921,10 @@ button.bg-dark:focus {
     padding-right: 0.5rem !important;
 }
 
-.pb-2,
+/*.pb-2,
 .py-2 {
     padding-bottom: 0.5rem !important;
-}
+}*/
 
 .pl-2,
 .px-2 {
