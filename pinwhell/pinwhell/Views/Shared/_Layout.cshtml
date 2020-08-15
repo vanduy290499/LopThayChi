@@ -19,33 +19,44 @@
     <link rel="stylesheet" href="/Assets/client/css/flaticon.css">
     <link rel="stylesheet" href="/Assets/client/css/icomoon.css">
     <link rel="stylesheet" href="/Assets/client/css/style.css">
+
 </head>
 <body>
     <div class="py-2 bg-primary">
-        <div class="container">
-            <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-                <div class="col-lg-12 d-block">
-                    <div class="row d-flex">
-                        <div class="col-md-5 pr-4 d-flex topper align-items-center">
-                            <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                            <span class="text">186 Nguyễn Văn Cừ, Hòa Hiệp Bắc, Đà Nẵng</span>
-                        </div>
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                            <span><a style="color:rgba(255, 255, 255, 0.7)" href="mailto:lopthaychi@gmail.com">lopthaychi@gmail.com</a></span>
-                        </div>
-                        <div class="col-md pr-4 d-flex topper align-items-center">
-                            <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                            <span><a  style="color:rgba(255, 255, 255, 0.7)" href="tel://0795414951">+(84) 795 41 49 51</a></span>
+        <marquee width="70%" behavior="scroll">
+            <div class="container">
+                <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+                    <div class="col-lg-12 d-block">
+                        <div class="row d-flex">
+                            <div class="col-md-5 pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+                                <span class="text">186 Nguyễn Văn Cừ, Hòa Hiệp Bắc, Đà Nẵng</span>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                                <span><a style="color:rgba(255, 255, 255, 0.7)" href="mailto:lopthaychi@gmail.com">lopthaychi@gmail.com</a></span>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                                <span><a style="color:rgba(255, 255, 255, 0.7)" href="tel://0795414951">+(84) 795 41 49 51</a></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+        </marquee>
+        <div class="log">
+            <input name="login" value="Đăng nhập" type="button" />
+            <input name="register" value="Đăng kí" type="button" />
         </div>
+        
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
         <div class="container d-flex align-items-center">
-            <a class="navbar-brand" href="index.html">Kiddos</a>
+            <a class="navbar-brand" href="/trang-chu">
+                <img class="logo_dark" src="~/Assets/client/images/logo-lopthaychi.png" alt="logo" />
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -54,7 +65,7 @@
                     <li class="nav-item active"><a href="/trang-chu" class="nav-link pl-0">Trang chủ</a></li>
                     <li class="nav-item"><a href="/gioi-thieu" class="nav-link">Giới thiệu</a></li>
                     <li class="nav-item"><a href="/cac-khoa-hoc" class="nav-link">Khóa học</a></li>
-                    <li class="nav-item"><a href="/dinh-gia" class="nav-link">Định giá</a></li>
+                    <li class="nav-item"><a href="/dinh-gia" class="nav-link">Học phí</a></li>
                     <li class="nav-item"><a href="/bai-viet" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="/lien-he" class="nav-link">Liên hệ</a></li>
                 </ul>
@@ -63,7 +74,6 @@
     </nav>
     <!-- END nav -->
 
-    
     @RenderBody()
     <!-- footer -->
     <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -126,7 +136,7 @@
                         <form action="#" class="subscribe-form">
                             <div class="form-group">
                                 <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
-                                <input type="submit" value="Đăng kí" class="form-control submit px-3">
+                                <input type="submit" value="Subscribe" class="form-control submit px-3">
                             </div>
                         </form>
                     </div>
