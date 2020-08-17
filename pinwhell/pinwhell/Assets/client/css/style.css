@@ -13187,6 +13187,9 @@ textarea.form-control {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
+.appointment-form .form-control option{
+    color: #2046f4;
+}
 
     .appointment-form .form-control::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
