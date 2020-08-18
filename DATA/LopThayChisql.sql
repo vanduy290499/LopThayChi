@@ -40,6 +40,16 @@ create table ThongBao(
 	MaTB int primary key Identity(1,1),
 	BaiViet nvarchar(max)
 )
+alter table ThongBao
+add Image varchar(100),
+chitietthongbao int foreign key references Detail_Thongbao(MaDTB)
+
+create table Detail_Thongbao(
+	MaDTB int primary key Identity(1,1),
+	Baiviet nvarchar(max),
+	Image varchar(100)
+)
+
 create table Detail_BLog(
 	MaDBL int primary key Identity(1,1),
 	Baiviet nvarchar(max),

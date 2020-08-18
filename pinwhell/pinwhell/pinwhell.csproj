@@ -178,6 +178,7 @@
     <Content Include="Assets\client\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="Assets\client\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Assets\client\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="Assets\client\images\trungthu.jpg" />
     <Content Include="Assets\client\images\bg_1.jpg" />
     <Content Include="Assets\client\images\bg_2.jpg" />
     <Content Include="Assets\client\images\bg_3.jpg" />
