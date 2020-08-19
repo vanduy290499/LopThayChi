@@ -1,0 +1,10 @@
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.dll.config
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.pdb
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.pdb
