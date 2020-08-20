@@ -12555,7 +12555,7 @@ textarea.form-control {
 }
 
 .ftco-footer {
-    font-size: 14px;
+    font-size: 15px;
     background: #232323;
     padding: 6em 0;
 }
@@ -13186,6 +13186,9 @@ textarea.form-control {
     border-radius: 0px;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+}
+.appointment-form .form-control option{
+    color: #2046f4;
 }
 
     .appointment-form .form-control::-webkit-input-placeholder {

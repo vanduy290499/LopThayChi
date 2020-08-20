@@ -23,8 +23,8 @@ create table Teacher(
 	MaGV int primary key Identity(1,1),
 	TenGV nvarchar(100),
 	Fb varchar(50)
-
 )
+
 create table  HocPhi(
 	MaHP int primary key Identity(1,1),
 	MaMH int,
@@ -40,6 +40,30 @@ create table ThongBao(
 	MaTB int primary key Identity(1,1),
 	BaiViet nvarchar(max)
 )
+alter table ThongBao
+add Image varchar(100),
+chitietthongbao int foreign key references Detail_Thongbao(MaDTB)
+
+create table Detail_Thongbao(
+	MaDTB int primary key Identity(1,1),
+	Baiviet nvarchar(max),
+	Image varchar(100)
+)
+
+create table Detail_BLog(
+	MaDBL int primary key Identity(1,1),
+	Baiviet nvarchar(max),
+	Image nvarchar(100),
+)
+
+create table Blog(
+	MaBL int primary key Identity(1,1),
+	Baiviet nvarchar(1000),
+	Image nvarchar(100),
+	ChiTietBlog int Foreign key references Detail_BLog(MaDBL),
+)
+
+
 create table TinhTrangHocPhi(
 	MaTTHP int primary key IdentiTy (1,1),
 	Tinhtranghp nvarchar(50),

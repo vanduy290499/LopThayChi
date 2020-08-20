@@ -13,12 +13,7 @@ namespace pinwhell
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-            name: "Home",
-            url: "trang-chu",
-            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-            namespaces: new[] { "pinwhell.Controllers" }
-        );
+            
             routes.MapRoute(
              name: "About",
              url: "gioi-thieu",

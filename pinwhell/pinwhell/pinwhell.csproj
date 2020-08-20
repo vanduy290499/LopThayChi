@@ -141,6 +141,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Manage\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Manage\Controllers\UserController.cs" />
+    <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -178,6 +181,7 @@
     <Content Include="Assets\client\fonts\ionicons\css\ionicons.min.css" />
     <Content Include="Assets\client\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Assets\client\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="Assets\client\images\trungthu.jpg" />
     <Content Include="Assets\client\images\bg_1.jpg" />
     <Content Include="Assets\client\images\bg_2.jpg" />
     <Content Include="Assets\client\images\bg_3.jpg" />
@@ -198,6 +202,7 @@
     <Content Include="Assets\client\images\image_5.jpg" />
     <Content Include="Assets\client\images\image_6.jpg" />
     <Content Include="Assets\client\images\loc.png" />
+    <Content Include="Assets\client\images\LOGO ĐỨNG .png" />
     <Content Include="Assets\client\images\logo-lopthaychi.png" />
     <Content Include="Assets\client\images\person_1.jpg" />
     <Content Include="Assets\client\images\person_2.jpg" />
@@ -365,6 +370,9 @@
     <Content Include="Assets\client\scss\bootstrap\_utilities.scss" />
     <Content Include="Assets\client\scss\bootstrap\_variables.scss" />
     <Content Include="Assets\client\scss\style.scss" />
+    <Content Include="Areas\Manage\Views\web.config" />
+    <Content Include="Areas\Manage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Manage\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -396,7 +404,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\admin\" />
+    <Folder Include="Areas\Manage\Models\" />
+    <Folder Include="Areas\Manage\Views\User\" />
     <Folder Include="Assets\admin\" />
     <Folder Include="Models\" />
     <Folder Include="Views\User\" />
