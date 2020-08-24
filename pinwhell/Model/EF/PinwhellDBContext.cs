@@ -5,10 +5,10 @@ namespace Model.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class PinwhellDBContext : DbContext
+    public partial class PinwhellDbContext : DbContext
     {
-        public PinwhellDBContext()
-            : base("name=PinwhellDBContext")
+        public PinwhellDbContext()
+            : base("name=PinwhellDbContext")
         {
         }
 
