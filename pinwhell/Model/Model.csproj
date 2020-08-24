@@ -50,11 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="EF\PinwhellDBContext.cs" />
+    <Compile Include="EF\Blog.cs" />
+    <Compile Include="EF\Detail_BLog.cs" />
+    <Compile Include="EF\Detail_Thongbao.cs" />
+    <Compile Include="EF\HocPhi.cs" />
+    <Compile Include="EF\MonHoc.cs" />
+    <Compile Include="EF\PinwhellDbContext.cs" />
+    <Compile Include="EF\Student.cs" />
+    <Compile Include="EF\sysdiagrams.cs" />
+    <Compile Include="EF\TaiKhoan.cs" />
+    <Compile Include="EF\TaiLieuHocTap.cs" />
+    <Compile Include="EF\Teacher.cs" />
+    <Compile Include="EF\ThongBao.cs" />
+    <Compile Include="EF\TinhTrangHocPhi.cs" />
+    <Compile Include="EF\TinhTrangHocTap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
