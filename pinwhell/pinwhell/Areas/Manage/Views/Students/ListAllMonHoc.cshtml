@@ -1,0 +1,53 @@
+﻿@using PagedList.Mvc;
+@using Model;
+@model PagedList.IPagedList<Model.EF.MonHoc>
+@{
+    ViewBag.Title = "ListAllMonHoc";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section header{
+        Danh Sách Môn Học
+    }
+
+<div class="row">
+    <!-- column -->
+    <div class="col-12">
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">Mã MH</th>
+                            <th class="border-top-0">Tên Môn Học</th>
+                            <th class="border-top-0">Trạng Thái</th>
+                            <th class="border-top-0">Thao Tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="txt-oflo">@item.MaMH</td>
+                                <td class="txt-oflo">@item.TenMH</td>
+                                <td class="txt-oflo">@item.Status</td>
+                                <td class="txt-oflo">
+                                    <a href="#">Sửa</a>
+                                    <span>||</span>
+                                    <a href="#">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <center>
+                    <div>
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                    </div>
+                </center>
+
+            </div>
+        </div>
+    </div>
+</div>
+
