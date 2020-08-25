@@ -93,6 +93,12 @@ create table Teacher_Student(
 	MaHS int FOREIGN KEY REFERENCES Student(MaHS),
 	MaGV int FOREIGN KEY REFERENCES Teacher(MaGV)
 )
+alter table TaiKhoan 
+add Status bit
+alter table TaiKhoan
+add NgayTao date
+alter table Teacher
+add Status date
 ---------proc thêm dữ liệu-------------
 --Hoc Phi--
 create proc HocPhi_Them(

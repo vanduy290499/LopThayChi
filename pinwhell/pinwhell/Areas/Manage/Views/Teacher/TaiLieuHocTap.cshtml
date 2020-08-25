@@ -1,11 +1,11 @@
-﻿@model PagedList.IPagedList<Model.EF.TaiKhoan>
+﻿@model PagedList.IPagedList<Model.EF.TaiLieuHocTap>
 @using PagedList.Mvc;
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "TaiLieuHocTap";
     Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
 }
 @section Header{
-    Danh Sách Người Dùng
+    Tài Liệu Học Tập
     }
 <div class="container-fluid">
     <div class="row">
@@ -16,13 +16,8 @@
                         <thead>
                             <tr>
                                 <th class="border-top-0">Mã</th>
-                                <th class="border-top-0">Họ và tên</th>
-                                <th class="border-top-0">Email</th>
-                                <th class="border-top-0">SDT</th>
-                                <th class="border-top-0">Facebook</th>
-                                <th class="border-top-0">Địa chỉ</th>
-                                <th class="border-top-0">Tài khoản</th>
-                                <th class="border-top-0">Mật khẩu</th>
+                                <th class="border-top-0">Môn học</th>
+                                <th class="border-top-0">Tài Liệu</th>
                                 <th class="border-top-0">Status</th>
                                 <th class="border-top-0">#</th>
                             </tr>
@@ -31,18 +26,13 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td>@item.MaTK</td>
-                                    <td>@item.Hoten</td>
-                                    <td>@item.Email</td>
-                                    <td>@item.SDT</td>
-                                    <td>@item.Fb</td>
-                                    <td>@item.DiaChi</td>
-                                    <td>@item.Username</td>
-                                    <td>@item.Password</td>
+                                    <td>@item.MaTL</td>
+                                    <td>@item.MonHoc</td>
+                                    <td>@item.TaiLieu</td>
                                     <td>@item.Status</td>
                                     <td>
-                                        <a href="/User/Edit/@item.MaTK">Sửa</a>
-                                        <a href="/User/Delete/@item.MaTK">Xóa</a>
+                                        <a href="/User/Edit/@item.MaTL">Sửa</a>
+                                        <a href="/User/Delete/@item.MaTL">Xóa</a>
                                     </td>
                                 </tr>
                             }
@@ -54,5 +44,4 @@
         </div>
     </div>
 </div>
-
 

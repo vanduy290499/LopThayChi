@@ -17,7 +17,7 @@ namespace Model.DAO
         }
         public IEnumerable<TaiKhoan> ListAllPaging(int page, int pageSize)
         {
-            return db.TaiKhoan.ToPagedList(page, pageSize);
+            return db.TaiKhoan.OrderByDescending(x=>x.NgayTao).ToPagedList(page, pageSize);
         }
     }
 }
