@@ -139,3 +139,14 @@ C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\pinwhell\obj\Debug\pinwhell.
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\pinwhell\obj\Debug\pinwhell.pdb
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\pinwhell\bin\PagedList.dll
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\pinwhell\bin\PagedList.xml
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\EntityFramework.dll
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\EntityFramework.SqlServer.dll
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\PagedList.dll
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\PagedList.Mvc.dll
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\Model.pdb
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\Model.dll.config
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\EntityFramework.xml
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\EntityFramework.SqlServer.xml
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\PagedList.xml
+E:\LopThayChi\LopThayChi\pinwhell\pinwhell\bin\PagedList.Mvc.xml
