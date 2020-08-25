@@ -25,3 +25,4 @@ E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\PagedList.Mvc.xml
 E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.dll
 E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.pdb
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
