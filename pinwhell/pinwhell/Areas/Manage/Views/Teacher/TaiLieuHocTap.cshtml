@@ -1,0 +1,48 @@
+﻿@model PagedList.IPagedList<Model.EF.TaiLieuHocTap>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "TaiLieuHocTap";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section header{
+        Danh Sách Tài Liệu Học Tập
+    }
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+           
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã</th>
+                            <th>Môn Học</th>
+                            <th>Tài liệu</th>
+                            <th>Trạng thái</th>
+                            <th>#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaTL</td>
+                                <td>@item.MonHoc</td>
+                                <td>@item.TaiLieu</td>
+                                <td>@item.status</td>
+                                <td>
+                                    <a href="/User/Edit/@item.MaTL">Sửa</a>
+                                    <a href="/User/Delete/@item.MaTL">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+            </div>
+        </div>
+    </div>
+</div>
+
