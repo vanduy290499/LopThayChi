@@ -24,6 +24,9 @@ namespace Model.EF
 
         public bool? Status { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime? NgayTao { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Blog> Blog { get; set; }
     }
