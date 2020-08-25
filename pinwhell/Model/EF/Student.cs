@@ -39,6 +39,8 @@ namespace Model.EF
         [Column(TypeName = "date")]
         public DateTime? NgayDongHocPhi { get; set; }
 
+        public bool? Status { get; set; }
+
         public virtual HocPhi HocPhi1 { get; set; }
 
         public virtual MonHoc MonHoc1 { get; set; }

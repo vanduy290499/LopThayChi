@@ -22,6 +22,8 @@ namespace Model.EF
         [StringLength(100)]
         public string Image { get; set; }
 
+        public bool? Status { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThongBao> ThongBao { get; set; }
     }

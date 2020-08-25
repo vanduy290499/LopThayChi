@@ -23,6 +23,8 @@ namespace Model.EF
         [Column(TypeName = "date")]
         public DateTime? Ngaytao { get; set; }
 
+        public bool? Status { get; set; }
+
         public virtual Detail_BLog Detail_BLog { get; set; }
     }
 }

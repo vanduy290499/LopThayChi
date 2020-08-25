@@ -19,6 +19,8 @@ namespace Model.EF
 
         public int? Chitietthongbao { get; set; }
 
+        public bool? Status { get; set; }
+
         public virtual Detail_Thongbao Detail_Thongbao { get; set; }
     }
 }
