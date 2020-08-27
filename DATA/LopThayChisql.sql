@@ -270,9 +270,10 @@ Tinhtranghoctap_Them N'Đạt',N'Tốt'
 go
 Tinhtranghoctap_Them N'Chưa đạt',N'Cần cố gắng hơn'
 
-select * from TinhTrangHocTap
 select * from MonHoc
 select * from HocPhi
+
+select * from TinhTrangHocTap
 select * from Student
 
 go

@@ -14,9 +14,15 @@ namespace Model.DAO
         {
             db = new PinwhellDbContext();
         }
+        public long Insert(Student entity)
+        {
+            db.Student.Add(entity);
+            db.SaveChanges();
+            return entity.MaHS;
+        }
         public IEnumerable<Student> ListAllStudent(int page, int pagesize)
         {
-            return db.Student.OrderByDescending(x => x.Lop).ToPagedList(page, pagesize);
+            return db.Student.OrderBy(x => x.Lop).ToPagedList(page, pagesize);
         }
         public IEnumerable<MonHoc> ListAllMonHoc(int page, int pagesize)
         {
