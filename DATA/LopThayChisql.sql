@@ -31,6 +31,9 @@ create table Teacher(
 	TenGV nvarchar(100),
 	Fb varchar(50)
 )
+alter table Teacher
+add sdt varchar(20),
+	email varchar(50)
 alter Table Teacher
 add Status bit
 create table  HocPhi(
