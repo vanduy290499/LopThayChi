@@ -15,6 +15,12 @@ namespace Model.DAO
         {
             db = new PinwhellDbContext();
         }
+        public long Insert(Teacher entity)
+        {
+            db.Teacher.Add(entity);
+            db.SaveChanges();
+            return entity.MaGV;
+        }
         public IEnumerable<Teacher> ListAllTeacherPaging(int page, int pageSize)
         {
             return db.Teacher.OrderBy(x => x.MaGV).ToPagedList(page, pageSize);
@@ -23,5 +29,6 @@ namespace Model.DAO
         {
             return db.TaiLieuHocTap.OrderByDescending(x => x.MaTL).ToPagedList(page, pageSize);
         }
+
     }
 }

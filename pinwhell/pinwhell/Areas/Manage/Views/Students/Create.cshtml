@@ -9,7 +9,6 @@
     }
 
 <script type="text/javascript"></script>
-</script>
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -95,7 +94,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NgayDongHocPhi, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.NgayDangKi, new { type = "date" })
+                @Html.TextBoxFor(model => model.NgayDongHocPhi, new { type = "date" })
             </div>
         </div>
 

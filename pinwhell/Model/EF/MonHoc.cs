@@ -1,4 +1,4 @@
-namespace Model.EF
+﻿namespace Model.EF
 {
     using System;
     using System.Collections.Generic;
@@ -19,9 +19,12 @@ namespace Model.EF
         [Key]
         public int MaMH { get; set; }
 
+        [Display(Name ="Tên Môn Học")]
+        [Required(ErrorMessage ="Chưa Nhập Môn Học")]
         [StringLength(50)]
         public string TenMH { get; set; }
 
+        [Display(Name ="Trạng Thái")]
         public bool? Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
