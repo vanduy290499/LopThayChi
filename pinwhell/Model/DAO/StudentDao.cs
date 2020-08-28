@@ -20,6 +20,12 @@ namespace Model.DAO
             db.SaveChanges();
             return entity.MaHS;
         }
+        public long Insert_MonHoc(MonHoc entity)
+        {
+            db.MonHoc.Add(entity);
+            db.SaveChanges();
+            return entity.MaMH;
+        }
         public IEnumerable<Student> ListAllStudent(int page, int pagesize)
         {
             return db.Student.OrderBy(x => x.Lop).ToPagedList(page, pagesize);

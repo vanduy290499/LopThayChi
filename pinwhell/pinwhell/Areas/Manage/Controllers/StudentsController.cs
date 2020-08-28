@@ -66,5 +66,30 @@ namespace pinwhell.Areas.Manage.Controllers
 
             return View("Create");
         }
+
+        [HttpGet]
+        public ActionResult CreateMonHoc()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateMonHoc(MonHoc mh)
+        {
+            if (ModelState.IsValid)
+            {
+                long id = dao.Insert_MonHoc(mh);
+                if (id > 0)
+                {
+                    return RedirectToAction("ListAllMonHoc", "Students");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Không Thêm Được");
+                }
+            }
+            return View("CreateMonHoc");
+
+        }
     }
 }
