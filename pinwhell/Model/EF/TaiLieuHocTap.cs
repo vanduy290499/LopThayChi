@@ -16,6 +16,8 @@ namespace Model.EF
 
         public string TaiLieu { get; set; }
 
+        public bool? status { get; set; }
+
         public virtual MonHoc MonHoc1 { get; set; }
     }
 }

@@ -14,32 +14,48 @@ create table TaiKhoan(
 	Username varchar(50),
 	Password varchar(50)
 )
+alter table TaiKhoan 
+add Status bit
+
+alter table TaiKhoan
+add NgayTao date
+
 create table MonHoc(
 	MaMH int primary key Identity(1,1),
 	TenMH nvarchar(50)
 )
-
+alter table MonHoc
+add Status bit
 create table Teacher(
 	MaGV int primary key Identity(1,1),
 	TenGV nvarchar(100),
 	Fb varchar(50)
 )
-
+alter table Teacher
+add sdt varchar(20),
+	email varchar(50)
+alter Table Teacher
+add Status bit
 create table  HocPhi(
 	MaHP int primary key Identity(1,1),
 	MaMH int,
 	HocPhi int
 )
-
+alter Table HocPhi
+add Status bit
 create table TaiLieuHocTap(
 	MaTL int primary key Identity(1,1),
 	MonHoc int FOREIGN KEY REFERENCES MonHoc(MaMH),
 	TaiLieu nvarchar(max)
 )
+alter Table TaiLieuHocTap
+add status bit
 create table ThongBao(
 	MaTB int primary key Identity(1,1),
 	BaiViet nvarchar(max)
 )
+alter Table ThongBao
+add Status bit
 alter table ThongBao
 add Image varchar(100),
 chitietthongbao int foreign key references Detail_Thongbao(MaDTB)
@@ -49,20 +65,29 @@ create table Detail_Thongbao(
 	Baiviet nvarchar(max),
 	Image varchar(100)
 )
+alter table Detail_ThongBao
+add Status bit
 
+alter table Detail_ThongBao
+add NgayTao date
 create table Detail_BLog(
 	MaDBL int primary key Identity(1,1),
 	Baiviet nvarchar(max),
 	Image nvarchar(100),
 )
+alter table Detail_Blog
+add Status bit
 
+alter table Detail_Blog
+add NgayTao date
 create table Blog(
 	MaBL int primary key Identity(1,1),
 	Baiviet nvarchar(1000),
 	Image nvarchar(100),
 	ChiTietBlog int Foreign key references Detail_BLog(MaDBL),
 )
-
+alter table Blog
+add Status bit
 
 create table TinhTrangHocPhi(
 	MaTTHP int primary key IdentiTy (1,1),
@@ -75,6 +100,8 @@ create table TinhTrangHocTap(
 	TinhTrangHT nvarchar(50),
 	LoiNhac nvarchar(50)
 )
+alter table TinhTrangHocTap
+add Status bit
 create table Student(
 	MaHS int primary key Identity(1,1),
 	HoTenHS nvarchar(100),
@@ -89,10 +116,14 @@ create table Student(
 	LoiNhac nvarchar(max),
 	NgayDongHocPhi date
 )
+alter table Student
+add Status bit
 create table Teacher_Student(
 	MaHS int FOREIGN KEY REFERENCES Student(MaHS),
 	MaGV int FOREIGN KEY REFERENCES Teacher(MaGV)
 )
+alter table Teacher_Student
+add Status bit
 ---------proc thêm dữ liệu-------------
 --Hoc Phi--
 create proc HocPhi_Them(
@@ -242,9 +273,10 @@ Tinhtranghoctap_Them N'Đạt',N'Tốt'
 go
 Tinhtranghoctap_Them N'Chưa đạt',N'Cần cố gắng hơn'
 
-select * from TinhTrangHocTap
 select * from MonHoc
 select * from HocPhi
+
+select * from TinhTrangHocTap
 select * from Student
 
 go

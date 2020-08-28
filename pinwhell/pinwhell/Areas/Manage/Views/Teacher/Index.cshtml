@@ -1,0 +1,52 @@
+﻿@model  PagedList.IPagedList<Model.EF.Teacher>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section header{
+        Danh Sách Giáo Viên
+    }
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Facebook</th>
+                            <th>Địa chỉ</th>
+                            <th>Trạng thái</th>
+                            <th>#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaGV</td>
+                                <td>@item.TenGV</td>
+                                <td></td>
+                                <td></td>
+                                <td>@item.Fb</td>
+                                <td></td>
+                                <td>@item.Status</td>
+                                <td>
+                                    <a href="/User/Edit/@item.MaGV">Sửa</a>
+                                    <a href="/User/Delete/@item.MaGV">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+            </div>
+        </div>
+    </div>
+</div>

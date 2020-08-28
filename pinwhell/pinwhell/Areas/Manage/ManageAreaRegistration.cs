@@ -19,6 +19,7 @@ namespace pinwhell.Areas.Manage
                 "Manage/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
+           
         }
     }
 }

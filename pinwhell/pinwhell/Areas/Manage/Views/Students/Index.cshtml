@@ -1,0 +1,79 @@
+﻿@using PagedList.Mvc;
+@using Model;
+@model PagedList.IPagedList<Model.EF.Student>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section Header{
+ Danh Sách Học Sinh
+    }
+
+<div class="row">
+    <!-- column -->
+    <div class="col-12">
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">Mã HS</th>
+                            <th class="border-top-0">Tên HS</th>
+                            <th class="border-top-0">Tên PH</th>
+                            <th class="border-top-0">Môn Học</th>
+                            <th class="border-top-0">Lớp</th>
+                            <th class="border-top-0">Học Phí</th>
+                            <th class="border-top-0">Ngày Đăng Kí</th>
+                            <th class="border-top-0">Ngày Bắt Đầu Học</th>
+                            <th class="border-top-0">Tình Trạng Học Tập</th>
+                            <th class="border-top-0">Tình Trạng Học Phí</th>
+                            <th class="border-top-0">Lời Nhắc</th>
+                            <th class="border-top-0">Ngày Đóng Học Phí</th>
+                            <th class="border-top-0">Trạng Thái</th>
+                            <th class="border-top-0">Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @foreach(var item in Model)
+                       {
+                           <tr>
+                               <td class="txt-oflo">@item.MaHS</td>
+                               <td class="txt-oflo">@item.HoTenHS</td>
+                               <td class="txt-oflo">@item.HoTenPH</td>
+                               <td class="txt-oflo">@item.MonHoc</td>
+                               <td class="txt-oflo">@item.Lop</td>
+                               <td class="txt-oflo">@item.HocPhi</td>
+                               <td class="txt-oflo">@item.NgayDangKi</td>
+                               <td class="txt-oflo">@item.NgayBatDauHoc</td>
+                               <td class="txt-oflo">@item.TinhTrangHT</td>
+                               <td class="txt-oflo">@item.TinhTrangHP</td>
+                               <td class="txt-oflo">@item.LoiNhac</td>
+                               <td class="txt-oflo">@item.NgayDongHocPhi</td>
+                               <td class="txt-oflo">@item.Status</td>
+                               <td class="txt-oflo"> 
+                                   <a href="#">Sửa</a>
+                                   <span>||</span>
+                                   <a href="#">Xóa</a>
+                               </td>
+                           </tr>
+                       }
+                    </tbody>
+                </table>
+                <center>
+                    <div>
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                    </div>  
+                </center>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+       
+        <input type="button" value="Thêm Học Sinh" onclick="location.href='@Url.Action("Create","Students")'" class="btn btn-default" />
+    </div>
+</div>
+

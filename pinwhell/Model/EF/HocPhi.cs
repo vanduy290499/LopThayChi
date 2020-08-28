@@ -23,6 +23,8 @@ namespace Model.EF
         [Column("HocPhi")]
         public int? HocPhi1 { get; set; }
 
+        public bool? Status { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Student { get; set; }
     }

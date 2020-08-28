@@ -17,5 +17,13 @@ namespace Model.EF
 
         [StringLength(50)]
         public string Fb { get; set; }
+
+        public bool? Status { get; set; }
+
+        [StringLength(20)]
+        public string sdt { get; set; }
+
+        [StringLength(50)]
+        public string email { get; set; }
     }
 }

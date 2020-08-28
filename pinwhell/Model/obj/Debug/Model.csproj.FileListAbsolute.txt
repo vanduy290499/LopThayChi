@@ -1,0 +1,28 @@
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\Model.dll.config
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\Model.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\Model.pdb
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.xml
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\obj\Debug\Model.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\obj\Debug\Model.pdb
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\PagedList.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\PagedList.xml
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\bin\Debug\PagedList.Mvc.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.dll.config
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\Model.pdb
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\PagedList.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\PagedList.Mvc.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\PagedList.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Debug\PagedList.Mvc.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Debug\Model.pdb
+C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
