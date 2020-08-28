@@ -18,6 +18,8 @@ namespace Model.EF
         [StringLength(50)]
         public string Fb { get; set; }
 
+        public string DiaChi { set; get; }
+
         public bool? Status { get; set; }
 
         [StringLength(20)]
