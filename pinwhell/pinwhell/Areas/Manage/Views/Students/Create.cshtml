@@ -10,7 +10,7 @@
 
 <script type="text/javascript"></script>
 </script>
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create","Students",FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()
