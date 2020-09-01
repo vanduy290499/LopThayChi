@@ -34,12 +34,12 @@
                                 <td>@item.TenGV</td>
                                 <td>@item.email</td>
                                 <td>@item.sdt</td>
-                                <td>@item.Fb</td>
+                                <td><a href="@item.Fb">@item.Fb</a></td>
                                 <td>@item.DiaChi</td>
                                 <td>@item.Status</td>
                                 <td>
-                                    <a href="/User/Edit/@item.MaGV">Sửa</a>
-                                    <a href="/User/Delete/@item.MaGV">Xóa</a>
+                                    @*<a href="/User/Edit/@item.MaGV">Sửa</a>*@
+                                    @Html.ActionLink("Xóa", "Deleted", new {id = @item.MaGV })
                                 </td>
                             </tr>
                         }
@@ -48,5 +48,10 @@
                 @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
             </div>
         </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="button" value="Thêm giáo viên" onclick="location.href='@Url.Action("Create","Teacher")'" class="btn btn-default" />
     </div>
 </div>

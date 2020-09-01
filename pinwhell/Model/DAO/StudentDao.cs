@@ -20,6 +20,20 @@ namespace Model.DAO
             db.SaveChanges();
             return entity.MaHS;
         }
+        public bool Deleted(int id)
+        {
+            try
+            {
+                var xoa = db.Student.Find(id);
+                db.Student.Remove(xoa);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         public long Insert_MonHoc(MonHoc entity)
         {
             db.MonHoc.Add(entity);

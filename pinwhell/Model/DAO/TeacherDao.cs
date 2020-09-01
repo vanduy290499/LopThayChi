@@ -23,5 +23,26 @@ namespace Model.DAO
         {
             return db.TaiLieuHocTap.OrderByDescending(x => x.MaTL).ToPagedList(page, pageSize);
         }
+        public long Insert(Teacher entity)
+        {
+            db.Teacher.Add(entity);
+            db.SaveChanges();
+            return entity.MaGV;
+        }
+        public bool Deleted(int id)
+        {
+            try
+            {
+                var xoa = db.Teacher.Find(id);
+                db.Teacher.Remove(xoa);
+                db.SaveChanges();
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+
+        }
     }
 }
