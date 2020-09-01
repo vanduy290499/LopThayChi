@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using Model.EF;
 
 namespace pinwhell.Areas.Manage.Controllers
 {
@@ -16,6 +17,29 @@ namespace pinwhell.Areas.Manage.Controllers
             var dao = new UserDao();
             var model = dao.ListAllPaging(page, pageSize);
             return View(model);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        { 
+            return View();
+        }
+        
+        public ActionResult Create(TaiKhoan tk )
+        {
+            var dao = new UserDao();
+            if (ModelState.IsValid)
+            {
+                long id = dao.Insert(tk);
+                if (id > 0)
+                {
+                    return RedirectToAction("Index", "User");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Thêm User Không Thành Công");
+                }
+            }
+            return View("Create");
         }
     }
 }

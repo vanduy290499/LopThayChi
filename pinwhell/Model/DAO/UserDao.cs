@@ -25,6 +25,13 @@ namespace Model.DAO
         {
             return db.TaiKhoan.SingleOrDefault(x => x.Username == userName);
         }
+
+        public long Insert(TaiKhoan entity)
+        {
+            db.TaiKhoan.Add(entity);
+            db.SaveChanges();
+            return entity.MaTK;
+        }
         public bool Login(string userName, string passWord)
         {
             var result = db.TaiKhoan.Count(x => x.Username == userName && x.Password == passWord);
