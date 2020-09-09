@@ -41,8 +41,8 @@
                                 <td>@item.Password</td>
                                 <td>@item.Status</td>
                                 <td>
-                                    <a href="/User/Edit/@item.MaTK">Sửa</a>
-                                    <a href="/User/Delete/@item.MaTK">Xóa</a>
+                                    @Html.ActionLink("Sửa", "Edit", new { id = @item.MaTK })
+                                    @Html.ActionLink("Xóa", "Deleted", new { id = @item.MaTK })
                                 </td>
                             </tr>
                         }
