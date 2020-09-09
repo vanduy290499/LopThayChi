@@ -37,8 +37,8 @@ namespace Model.DAO
         {
             try
             {
-                var xoa = db.TaiKhoan.Find(id);
-                db.TaiKhoan.Remove(xoa);
+                var user = db.TaiKhoan.Find(id);
+                db.TaiKhoan.Remove(user);
                 db.SaveChanges();
                 return true;
             }
