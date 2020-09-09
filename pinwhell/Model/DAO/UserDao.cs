@@ -32,6 +32,46 @@ namespace Model.DAO
             db.SaveChanges();
             return entity.MaTK;
         }
+
+        public bool Deleted(int id)
+        {
+            try
+            {
+                var xoa = db.TaiKhoan.Find(id);
+                db.TaiKhoan.Remove(xoa);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+        public bool Update(TaiKhoan entity)
+        {
+            try
+            {
+                var user = db.TaiKhoan.Find(entity.MaTK);
+                user.Hoten = entity.Hoten;
+                user.Email = entity.Email;
+                user.Fb = entity.Fb;
+                user.DiaChi = entity.DiaChi;
+                user.Quyen = entity.Quyen;
+                user.SDT = entity.SDT;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public TaiKhoan ViewDetail(int id)
+        {
+            return db.TaiKhoan.Find(id);
+        }
+
         public bool Login(string userName, string passWord)
         {
             var result = db.TaiKhoan.Count(x => x.Username == userName && x.Password == passWord);
