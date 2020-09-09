@@ -44,5 +44,27 @@ namespace Model.DAO
             }
 
         }
+        public bool Update(Teacher entity)
+        {
+            try
+            {
+                var teacher = db.Teacher.Find(entity.MaGV);
+                teacher.TenGV = entity.TenGV;
+                teacher.sdt = entity.sdt;
+                teacher.Fb = entity.Fb;
+                teacher.DiaChi = entity.DiaChi;
+                teacher.email = entity.email;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public Teacher ViewDetail(int id)
+        {
+            return db.Teacher.Find(id);
+        }
     }
 }

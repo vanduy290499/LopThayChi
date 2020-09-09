@@ -38,7 +38,7 @@
                                 <td>@item.DiaChi</td>
                                 <td>@item.Status</td>
                                 <td>
-                                    @*<a href="/User/Edit/@item.MaGV">Sửa</a>*@
+                                    @Html.ActionLink("Sửa","Edit",new { id = @item.MaGV })
                                     @Html.ActionLink("Xóa", "Deleted", new {id = @item.MaGV })
                                 </td>
                             </tr>
