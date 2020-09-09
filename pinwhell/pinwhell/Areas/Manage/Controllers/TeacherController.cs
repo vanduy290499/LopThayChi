@@ -52,5 +52,28 @@ namespace pinwhell.Areas.Manage.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult Edit(int id)
+        {
+            var teacher = new TeacherDao().ViewDetail(id);
+            return View(teacher);
+        }
+        [HttpPost]
+        public ActionResult Edit(Teacher ta)
+        {
+            var dao = new TeacherDao();
+            if (ModelState.IsValid)
+            {
+                var id = dao.Update(ta);
+                if (id)
+                {
+                    return RedirectToAction("Index", "Teacher");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập Nhật giáo viên Không Thành Công");
+                }
+            }
+            return View("Edit");
+        }
     }
 }
