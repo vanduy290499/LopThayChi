@@ -27,14 +27,19 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
+                            <tr id="row_@item.MaMH">
                                 <td class="txt-oflo">@item.MaMH</td>
                                 <td class="txt-oflo">@item.TenMH</td>
                                 <td class="txt-oflo">@item.Status</td>
                                 <td class="txt-oflo">
                                     <a href="#">Sửa</a>
-                                    <span>||</span>
-                                    <a href="#">Xóa</a>
+                                    |
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaMH }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có chắc xóa tài khoản này?",
+                                   OnComplete = "$('#row_" + @item.MaMH + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
                                 </td>
                             </tr>
                         }

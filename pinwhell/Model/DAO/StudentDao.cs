@@ -20,7 +20,7 @@ namespace Model.DAO
             db.SaveChanges();
             return entity.MaHS;
         }
-        public bool Deleted(int id)
+        public bool Delete(int id)
         {
             try
             {
@@ -47,6 +47,25 @@ namespace Model.DAO
         public IEnumerable<MonHoc> ListAllMonHoc(int page, int pagesize)
         {
             return db.MonHoc.OrderBy(x => x.MaMH).ToPagedList(page, pagesize);
+        }
+        public Student ViewDetail(int id)
+        {
+            return db.Student.Find(id);
+        }
+        public bool Update(Student entity)
+        {
+            try
+            {
+                var student = db.Student.Find(entity.MaHS);
+                student.HoTenHS = entity.HoTenHS;
+                student.HoTenPH = entity.HoTenPH;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }

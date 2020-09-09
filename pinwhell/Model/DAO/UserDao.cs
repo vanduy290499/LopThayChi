@@ -33,7 +33,7 @@ namespace Model.DAO
             return entity.MaTK;
         }
 
-        public bool Deleted(int id)
+        public bool Delete(int id)
         {
             try
             {
