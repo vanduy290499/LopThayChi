@@ -29,7 +29,7 @@ namespace Model.DAO
             db.SaveChanges();
             return entity.MaGV;
         }
-        public bool Deleted(int id)
+        public bool Delete(int id)
         {
             try
             {

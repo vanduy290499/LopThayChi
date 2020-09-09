@@ -29,7 +29,7 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
+                            <tr id="row_@item.MaGV">
                                 <td>@item.MaGV</td>
                                 <td>@item.TenGV</td>
                                 <td>@item.email</td>
@@ -39,7 +39,13 @@
                                 <td>@item.Status</td>
                                 <td>
                                     @Html.ActionLink("Sửa","Edit",new { id = @item.MaGV })
-                                    @Html.ActionLink("Xóa", "Deleted", new {id = @item.MaGV })
+                                    |
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaGV }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có chắc xóa tài khoản này?",
+                                   OnComplete = "$('#row_" + @item.MaGV + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
                                 </td>
                             </tr>
                         }

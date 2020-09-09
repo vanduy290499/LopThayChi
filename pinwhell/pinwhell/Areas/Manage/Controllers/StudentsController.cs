@@ -91,5 +91,34 @@ namespace pinwhell.Areas.Manage.Controllers
             return View("CreateMonHoc");
 
         }
+        public ActionResult Edit(int id)
+        {
+            var student = new StudentDao().ViewDetail(id);
+            return View(student);
+        }
+        [HttpPost]
+        public ActionResult Edit(Student st)
+        {
+            var dao = new StudentDao();
+            if (ModelState.IsValid)
+            {
+                var id = dao.Update(st);
+                if (id)
+                {
+                    return RedirectToAction("Index", "Students");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập Nhật Học Sinh Không Thành CÔng");
+                }
+            }
+            return View("Edit");
+        }
+
+        public ActionResult Delete(int id)
+        {
+            new StudentDao().Delete(id);
+            return RedirectToAction("Index");
+        }
     }
 }

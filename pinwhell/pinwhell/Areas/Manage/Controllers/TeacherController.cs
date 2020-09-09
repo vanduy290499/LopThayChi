@@ -46,9 +46,9 @@ namespace pinwhell.Areas.Manage.Controllers
             return View("Create");
         }
        
-        public ActionResult Deleted(int id)
+        public ActionResult Delete(int id)
         {
-            var teacher = new TeacherDao().Deleted(id);
+            var teacher = new TeacherDao().Delete(id);
             return RedirectToAction("Index");
 
         }

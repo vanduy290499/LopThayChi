@@ -44,7 +44,7 @@ namespace pinwhell.Areas.Manage.Controllers
 
         public ActionResult Delete(int id)
         {
-            var User = new UserDao().Deleted(id);
+            var User = new UserDao().Delete(id);
             return RedirectToAction("Index");
 
         }
