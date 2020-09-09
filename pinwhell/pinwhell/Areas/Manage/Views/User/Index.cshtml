@@ -6,7 +6,7 @@
 }
 @section Header{
     Danh Sách Người Dùng
-    }
+}
 
 <div class="row">
     <div class="col-12">
@@ -28,9 +28,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(var item in Model)
+                        @foreach (var item in Model)
                         {
-                            <tr>
+                            <tr id="row_@item.MaTK">
                                 <td>@item.MaTK</td>
                                 <td>@item.Hoten</td>
                                 <td>@item.Email</td>
@@ -42,13 +42,20 @@
                                 <td>@item.Status</td>
                                 <td>
                                     @Html.ActionLink("Sửa", "Edit", new { id = @item.MaTK })
-                                    @Html.ActionLink("Xóa", "Deleted", new { id = @item.MaTK })
+                                    |
+                                    @Ajax.ActionLink("Xóa", "Delete",new { @id = item.MaTK }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có chắc xóa tài khoản này?",
+                                   OnComplete = "$('#row_"+@item.MaTK+"').remove()",
+                                   HttpMethod="Delete"
+                               })
+                                    
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
-                @Html.PagedListPager(Model, page => Url.Action("Index", new { page}))
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
             </div>
         </div>
     </div>

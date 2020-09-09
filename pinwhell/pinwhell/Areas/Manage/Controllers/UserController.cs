@@ -42,9 +42,9 @@ namespace pinwhell.Areas.Manage.Controllers
             return View("Create");
         }
 
-        public ActionResult Deleted(int id)
+        public ActionResult Delete(int id)
         {
-            var user = new UserDao().Deleted(id);
+            var User = new UserDao().Deleted(id);
             return RedirectToAction("Index");
 
         }
