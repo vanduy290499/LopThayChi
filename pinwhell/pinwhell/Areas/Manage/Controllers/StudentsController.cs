@@ -17,18 +17,19 @@ namespace pinwhell.Areas.Manage.Controllers
         public PinwhellDbContext db = new PinwhellDbContext();
         public ActionResult Index(int page = 1, int pagesize = 10)
         {
-         
-            var model = dao.ListAllStudent(page, pagesize);
+
+            var model = dao.ListAllSudent(page, pagesize);
             int count = model.Count();
             return View(model);
         }
-        public ActionResult ListAllMonHoc(int page = 1, int pagesize = 10)
-        {
-            
-            var model = dao.ListAllMonHoc(page, pagesize);
-            return View(model);
-        }
-        
+
+        //public ActionResult Index(int id,int page = 1 , int pagesize = 10)
+        //{
+        //    var student = new StudentDao().ViewDetail(id);
+        //    int totalRecord = 0;
+        //    var model = dao.Listall(id, ref totalRecord, page, pagesize);
+        //    return View(model);
+        //}
         [HttpGet]
         public ActionResult Create()
         {
@@ -91,9 +92,20 @@ namespace pinwhell.Areas.Manage.Controllers
             return View("CreateMonHoc");
 
         }
-        public ActionResult Edit(int id)
+        //public ActionResult Edit(int id)
+        //{
+        //    var student = new StudentDao().ViewDetail(id);
+        //    return View(student);
+        //}
+        [HttpGet]
+        public ActionResult Edit(int id )
         {
             var student = new StudentDao().ViewDetail(id);
+            List<TinhTrangHocTap> ttht = db.TinhTrangHocTap.ToList();
+            ViewBag.ttht = new SelectList(ttht, "MaTTHT", "TinhTrangHT");
+
+            List<TinhTrangHocPhi> tthp = db.TinhTrangHocPhi.ToList();
+            ViewBag.tthp = new SelectList(tthp, "MaTTHP", "TinhTrangHP");
             return View(student);
         }
         [HttpPost]
