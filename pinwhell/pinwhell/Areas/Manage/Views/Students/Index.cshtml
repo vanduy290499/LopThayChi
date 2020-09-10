@@ -1,6 +1,7 @@
 ﻿@using PagedList.Mvc;
 @using Model;
 @model PagedList.IPagedList<Model.EF.Student>
+    @*@model PagedList.IPagedList<Model.ViewModel.StudentList>*@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
@@ -56,7 +57,7 @@
                                    |
                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaHS }, new AjaxOptions
                               {
-                                  Confirm = "Bạn có chắc xóa tài khoản này?",
+                                  Confirm = "Bạn có chắc bỏ học sinh này?",
                                   OnComplete = "$('#row_" + @item.MaHS + "').remove()",
                                   HttpMethod = "Delete"
                               })

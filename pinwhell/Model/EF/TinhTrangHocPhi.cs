@@ -22,7 +22,7 @@ namespace Model.EF
         public string Tinhtranghp { get; set; }
 
         [StringLength(50)]
-        public string Status { get; set; }
+        public String Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Student { get; set; }
