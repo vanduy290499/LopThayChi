@@ -28,29 +28,33 @@
     <link rel="stylesheet" type="text/css" href="/Assets/admin/css/util.css">
     <link rel="stylesheet" type="text/css" href="/Assets/admin/css/main.css">
     <!--===============================================================================================-->
+
+
 </head>
+
 <body style="background-color: #666666;">
 
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <div class="login100-form validate-form">
+                <div class="login100-form validate-form" name="contact-form">
                     @using (Html.BeginForm("Login", "Login", FormMethod.Post))
                     {
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" });
                         <span class="login100-form-title p-b-43">
                             Đăng Nhập Hệ Thống
                         </span>
 
 
                         <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                            @Html.TextBoxFor(model => model.UserName, new { @class = "input100", @name = "email" })
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "input100", @name = "email"})
                             <span class="focus-input100"></span>
                             <span class="label-input100">Tên đăng nhập</span>
                         </div>
 
 
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
-                            @Html.PasswordFor(model => model.PassWord, new { @class = "input100", @name = "pass" })
+                            @Html.PasswordFor(model => model.PassWord, new { @class = "input100", @name = "pass", @id = "password" })
                             <span class="focus-input100"></span>
                             <span class="label-input100">Mật Khẩu</span>
                         </div>

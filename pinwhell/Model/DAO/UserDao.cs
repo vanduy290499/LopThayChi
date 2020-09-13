@@ -72,14 +72,28 @@ namespace Model.DAO
             return db.TaiKhoan.Find(id);
         }
 
-        public bool Login(string userName, string passWord)
+        public int Login(string userName, string passWord)
         {
-            var result = db.TaiKhoan.Count(x => x.Username == userName && x.Password == passWord);
-            if (result > 0)
+            var result = db.TaiKhoan.SingleOrDefault(x => x.Username == userName);
+            if (result == null)
             {
-                return true;
+                return 0;
             }
-            return false;
+            else
+            {
+                if(result.Status == false)
+                {
+                    return -1;
+                }
+                else
+                {
+                    if(result.Password == passWord)
+                    {
+                        return 1;
+                    }
+                    return -2;
+                }
+            }
         }
     }
 }
