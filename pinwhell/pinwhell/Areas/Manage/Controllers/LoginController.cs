@@ -22,16 +22,32 @@ namespace pinwhell.Areas.Manage.Controllers
             {
                 var dao = new UserDao();
                 var result = dao.Login(model.UserName, model.PassWord);
-                if (result)
+                if (result == 1)
                 {
                     var user = dao.GetById(model.UserName);
                     var userSession = new UserLogin();
                     userSession.UserName = user.Username;
                     userSession.UserID = user.MaTK;
+
                     Session.Add(CommonConstants.USER_SESSION, userSession);
                     return RedirectToAction("Index", "Home");
                 }
-                ModelState.AddModelError("", "Đăng nhập không đúng!");
+                else if (result == 0)
+                {
+                    ModelState.AddModelError("", "Tài khoản không tồn tại!");
+                }
+                else if (result == -1)
+                {
+                    ModelState.AddModelError("", "Tài khoản đang bị khóa!");
+                }
+                else if (result == -2)
+                {
+                    ModelState.AddModelError("", "Mật khẩu không đúng!");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Đăng nhập không đúng!");
+                }
             }
             return View("Index");
         }
