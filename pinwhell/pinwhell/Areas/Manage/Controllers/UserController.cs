@@ -9,7 +9,7 @@ using Model.EF;
 
 namespace pinwhell.Areas.Manage.Controllers
 {
-    public class UserController : Controller
+    public class UserController : BaseController
     {
         // GET: Manage/User
         public ActionResult Index(int page = 1, int pageSize = 10)

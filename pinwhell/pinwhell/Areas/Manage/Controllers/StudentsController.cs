@@ -10,7 +10,7 @@ using PagedList;
 
 namespace pinwhell.Areas.Manage.Controllers
 {
-    public class StudentsController : Controller
+    public class StudentsController : BaseController
     {
         // GET: Manage/Students
         public StudentDao dao = new StudentDao();
