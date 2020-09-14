@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace pinwhell.Areas.Manage.Controllers
 {
-    public class TeacherController : Controller
+    public class TeacherController : BaseController
     {
         public TeacherDao dao = new TeacherDao();
         public PinwhellDbContext db = new PinwhellDbContext();

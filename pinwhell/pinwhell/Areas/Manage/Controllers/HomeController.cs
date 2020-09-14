@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace pinwhell.Areas.Manage.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: Manage/Home
         public ActionResult Index()
