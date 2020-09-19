@@ -20,6 +20,13 @@ namespace Model.DAO
             return db.TaiKhoan.OrderBy(x => x.NgayTao).ToPagedList(page, pageSize);
         }
 
+        public bool ChangeStatus(int id)
+        {
+            var user = db.TaiKhoan.Find(id);
+            user.Status = !user.Status;
+            db.SaveChanges();
+            return user.Status;
+        }
 
         public TaiKhoan GetById(string userName)
         {

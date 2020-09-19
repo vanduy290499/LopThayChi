@@ -71,5 +71,14 @@ namespace pinwhell.Areas.Manage.Controllers
             }
             return View("Update");
         }
+        [HttpPost]
+        public JsonResult ChangeStatus(int id)
+        {
+            var result = new UserDao().ChangeStatus(id);
+            return Json(new
+            {
+                status = result
+            });
+        }
     }
 }
