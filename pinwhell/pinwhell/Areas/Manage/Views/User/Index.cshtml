@@ -7,7 +7,9 @@
 @section Header{
     Danh Sách Người Dùng
 }
-
+@section jsFooter{
+    <script src="/Assets/admin/controller/userController.js"></script>
+}
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -39,17 +41,17 @@
                                 <td>@item.DiaChi</td>
                                 <td>@item.Username</td>
                                 <td>@item.Password</td>
-                                <td>@item.Status</td>
+                                <td><a href="#" class="btn-active" data-id="@item.MaTK">@Html.Raw(item.Status ? "<strong>Kích hoạt</strong>" : "Khoá")</a></td>
                                 <td>
                                     @Html.ActionLink("Sửa", "Edit", new { id = @item.MaTK })
                                     |
-                                    @Ajax.ActionLink("Xóa", "Delete",new { @id = item.MaTK }, new AjaxOptions
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaTK }, new AjaxOptions
                                {
                                    Confirm = "Bạn có chắc xóa tài khoản này?",
-                                   OnComplete = "$('#row_"+@item.MaTK+"').remove()",
-                                   HttpMethod="Delete"
+                                   OnComplete = "$('#row_" + @item.MaTK + "').remove()",
+                                   HttpMethod = "Delete"
                                })
-                                    
+
                                 </td>
                             </tr>
                         }
