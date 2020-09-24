@@ -3,3 +3,8 @@ C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Common\bin\Debug\Common.pdb
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Common\obj\Debug\Common.dll
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\Common\obj\Debug\Common.pdb
+E:\LopThayChi\LopThayChi\pinwhell\Common\bin\Debug\Common.dll
+E:\LopThayChi\LopThayChi\pinwhell\Common\bin\Debug\Common.pdb
+E:\LopThayChi\LopThayChi\pinwhell\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\LopThayChi\LopThayChi\pinwhell\Common\obj\Debug\Common.dll
+E:\LopThayChi\LopThayChi\pinwhell\Common\obj\Debug\Common.pdb

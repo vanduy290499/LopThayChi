@@ -132,5 +132,6 @@ namespace pinwhell.Areas.Manage.Controllers
             new StudentDao().Delete(id);
             return RedirectToAction("Index");
         }
+
     }
 }
