@@ -3,3 +3,8 @@ C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\StaticResources\bin\Debug\St
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.csprojResolveAssemblyReference.cache
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.dll
 C:\Users\Nguyen Van Duy\Desktop\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.pdb
+E:\LopThayChi\LopThayChi\pinwhell\StaticResources\bin\Debug\StaticResources.dll
+E:\LopThayChi\LopThayChi\pinwhell\StaticResources\bin\Debug\StaticResources.pdb
+E:\LopThayChi\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.csprojResolveAssemblyReference.cache
+E:\LopThayChi\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.dll
+E:\LopThayChi\LopThayChi\pinwhell\StaticResources\obj\Debug\StaticResources.pdb

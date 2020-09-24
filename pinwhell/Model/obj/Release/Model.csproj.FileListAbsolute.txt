@@ -1,0 +1,14 @@
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\Model.dll.config
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\Model.pdb
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\EntityFramework.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\EntityFramework.SqlServer.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\PagedList.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\PagedList.Mvc.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\EntityFramework.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\EntityFramework.SqlServer.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\PagedList.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\bin\Release\PagedList.Mvc.xml
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Release\Model.dll
+E:\LopThayChi\LopThayChi\pinwhell\Model\obj\Release\Model.pdb

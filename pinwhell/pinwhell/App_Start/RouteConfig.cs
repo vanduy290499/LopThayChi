@@ -12,8 +12,14 @@ namespace pinwhell
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.RouteExistingFiles = true;
 
-            
+            routes.MapRoute(
+             name: "Home",
+             url: "trang-chu",
+             defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+             namespaces: new[] { "pinwhell.Controllers" }
+         );
             routes.MapRoute(
              name: "About",
              url: "gioi-thieu",
@@ -50,11 +56,13 @@ namespace pinwhell
             defaults: new { controller = "Blog", action = "BlogSingle", id = UrlParameter.Optional },
             namespaces: new[] { "pinwhell.Controllers" }
         );
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            name: "Default",
+            url: "{controller}/{action}/{id}",
+            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+            namespaces: new[] { "pinwhell.Controllers" }
+        );
         }
     }
 }
