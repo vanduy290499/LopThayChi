@@ -1,0 +1,70 @@
+﻿
+@model  PagedList.IPagedList<Model.EF.Blog>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section header{Blog}
+
+<p>
+    @Html.ActionLink("Thêm bài viết", "Create")
+</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                Mã Bài viết
+                            </th>
+                            <th>
+                                Bài viết
+                            </th>
+                            <th>
+                                Hình ảnh
+                            </th>
+                            <th>
+                                Ngày tạo
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th> Thao tác</th>
+                        </tr>
+
+                    </thead>
+                   
+                    @foreach (var item in Model) 
+                    {
+                        <tr id="row_@item.MaBL">
+                            <td class="txt-oflo">@item.MaBL</td>
+                            <td class="txt-oflo">@item.Baiviet</td>
+                            <td class="txt-oflo">@item.Image</td>
+                            <td class="txt-oflo">@item.Ngaytao</td> 
+                            <td class="txt-oflo">@item.Status</td>
+                            <td class="txt-oflo">
+                                @Html.ActionLink("Sửa", "Edit", new { id = @item.MaBL })
+                                |
+                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaBL }, new AjaxOptions
+                              {
+                                  Confirm = "Bạn có chắc bỏ học sinh này?",
+                                  OnComplete = "$('#row_" + @item.MaBL + "').remove()",
+                                  HttpMethod = "Delete"
+                              })
+                            </td>
+                        </tr>
+
+                    }
+
+                </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+                
